@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .siblings * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body class="siblings">
+    <div style="border: 1px solid black;">
+        <p>A paragraph in a div.</p>
+    </div>
+    <div style="border: 1px solid black;">
+        <p>A paragraph in another div.</p>
+    </div>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $( function($){
+            $("div").first().css({
+                "background-color": "yellow",
+            });
+        });
+    </script>
+</body>
+</html>
