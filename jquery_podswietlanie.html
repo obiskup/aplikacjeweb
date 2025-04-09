@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight {
+            background-color: #FC6;
+        }
+    </style>
+</head>
+<body>
+    <table class="striped">
+        <tr>
+            <td>pierwszy wiersz</td>
+        </tr>
+        <tr>
+            <td>drugi wiersz</td>
+        </tr>
+        <tr>
+            <td>trzeci wiersz</td>
+        </tr>
+    </table>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $( function($){
+            $("table.striped tr").mouseover( function(){
+                $(this).addClass('highlight');
+            }).mouseout( function(){
+                $(this).removeClass('highlight');
+            })
+        })
+    </script>
+</body>
+</html>
