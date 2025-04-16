@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas width="800" height="400" id="canvas"></canvas>
+    <script>
+        const canvas=document.querySelector("#canvas");
+        const ctx=canvas.getContext("2d");
+
+        ctx.beginPath();
+        ctx.lineWidth = 3;
+        ctx.moveTo(200, 200);
+        ctx.bezierCurveTo(350, 200, 210, 5, 200, 20);
+        ctx.moveTo(200,200);
+        ctx.bezierCurveTo(50, 200, 190, 5, 200, 20);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.lineWidth = 5;
+        ctx.moveTo(130,150);
+        ctx.bezierCurveTo(150, 160, 200, 200, 270, 150);
+        ctx.moveTo(135,125);
+        ctx.bezierCurveTo(150, 120, 180, 180, 265, 125);
+        ctx.stroke();
+
+        
+
+</script>
+</body>
+</html>
