@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas width="400" height="200" id="canvas"></canvas>
+    <script>
+        const canvas=document.querySelector("#canvas");
+        const ctx=canvas.getContext("2d");
+
+        const img = new Image();
+        img.onload = () => {
+            ctx.drawImage(img, 0, 0);
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(0,0);
+            ctx.lineTo(0,175);
+            ctx.lineTo(175,175);
+            ctx.lineTo(175,0);
+            ctx.lineTo(0,0);
+            ctx.stroke();
+        };
+        img.src = "logo_zs_goetel.jpg";
+</script>
+</body>
+</html>
